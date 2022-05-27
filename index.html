@@ -1,0 +1,83 @@
+<html>
+    <h1><center><strong>濕猿的測試網站</strong></center></h1>
+    <marquee scrollamount="100" behavior=scroll><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" >你碰得到我嗎</a></marquee>
+    <img src="">
+
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <body class="p-5">
+        <h1 class="text-center"><strong><font color="#484891">1a2b猜數字</font></strong></h1>
+        <h6>遊戲說明:請輸入0~9的四位數，根據結果(a表示位置正確，b表示數字正確 位置錯誤)，猜出四位數</h6>
+        <h6>你考完會考就開始廢了嗎 歡迎來動動腦 預防老人癡呆</h6>
+        <h6>喔買尬你們要我做的也太難了吧哈哈哈 我試試看好嗎...</h6>
+        <input id="input" type="text" style="width: 100%;"></input>
+    <button id="submit" class="my-3 btn btn-primary btn-block">送出</button>
+    <button class="btn btn-warning js-reset">重新開始</button>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>猜</th>
+                <th>結果</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </body>
+
+</html>
+
+<script>
+
+    alert ('你好 濕猿自學HTML CSS JS 並在這邊進行測試 有空歡迎上來看看');
+    //1a4b遊戲
+        var numbers=[]
+        var answer=[]
+        var count=0
+        $(".js-reset").on("click", function(){
+                $("tbody").remove("");
+        });
+        //初始化 輸入0~9
+        for(var i=0;i<10;i++){
+            numbers.push(i);
+        }
+        //選答案
+        for(var i=0;i<4;i++){
+            var index= Math.floor(Math.random(answer)*numbers.length);
+            answer.push(numbers[index]);
+            numbers.splice(index,1);
+        }
+        //按鍵
+        $("#submit").on("click", function(){
+            var text=$("#input").val();
+            console.log(text);
+            $("#input").val();
+            var a=0;
+            var b=0;
+            for(var i=0;i<text.length;i++){
+                var index=answer.indexOf(text[i]*1); 
+                if(i==index){
+                    a++;
+                }else{
+                    if(index!=-1){
+                        b++;
+                    }
+                }
+            }
+            console.log("a="+a+"b="+b);
+            count++;
+            $("tbody").append(`<tr><td>${count}</td><td>${text}</td><td>${a}a${b}b</td><tr>`)
+            if(a==4){
+                alert("You Got It");
+            }else{
+                if(a==0){alert("So sad qq");}
+                if(a==1){alert("Wow ur lucky");}
+            }
+        })
+</script>
