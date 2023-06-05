@@ -11,9 +11,6 @@
 <script></script>
 <script src="https://kit.fontawesome.com/bd3ff733cf.js" crossorigin="anonymous"></script>
 <style></style>
-<script></script>
-<script src="https://kit.fontawesome.com/bd3ff733cf.js" crossorigin="anonymous"></script>
-<style></style>
 
 <body>
 
@@ -89,15 +86,14 @@
       <div class="card card-textbook">
         <h5 class="card-header">英文課本</h5>
         <div class="card-body">
-          <p class="card-text"><i class="fa-solid fa-bullhorn">敬請期待</i></p>
+          <p class="card-text"><i class="fa-solid fa-bullhorn">已更新至L8</i></p>
           <div class="btn-group">
             <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               英文課本
             </button>
             <ul class="dropdown-menu">
+              <li><a class="dropdown-item teb-l8" href="#">L8生字</a></li>
               <li><a class="dropdown-item teb-l7" href="#">L7生字</a></li>
-              <li><a class="dropdown-item" href="#">2</a></li>
-              <li><a class="dropdown-item" href="#">3</a></li>
             </ul>
           </div>
         </div>
@@ -109,7 +105,7 @@
       <div class="card card-vocbook">
         <h5 class="card-header">核心字彙</h5>
         <div class="card-body">
-          <p class="card-text"><i class="fa-solid fa-bullhorn">敬請期待</i></p>
+          <p class="card-text"><i class="fa-solid fa-bullhorn">已更新至U4</i></p>
           <div class="btn-group">
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               核心字彙 </button>
@@ -128,7 +124,7 @@
       <div class="card card-magazine">
         <h5 class="card-header">LIVE雜誌</h5>
         <div class="card-body">
-          <p class="card-text"><i class="fa-solid fa-bullhorn">敬請期待</i></p>
+          <p class="card-text"><i class="fa-solid fa-bullhorn">已更新至W2</i></p>
           <div class="btn-group">
             <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               LIVE雜誌 </button>
@@ -150,16 +146,31 @@
         <button class="nav-link active fw-bold" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">單字</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link fw-bold" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">拼字測驗</button>
+        <button class="nav-link fw-bold" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">選擇測驗</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link fw-bold" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">選擇測驗</button>
+        <button class="nav-link fw-bold" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">拼字測驗</button>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
         <ol class="list-group list-group-numbered vocab-list">
         </ol>
+      </div>
+      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+        <div class="multi-choose">
+          <div class="scorebox">
+            <p class="multi-score"></p>
+          </div>
+          <h1 class="multi-choose-title"></h1>
+          <div class="option-container">
+            <button id="option-1" type="button"></button>
+            <button id="option-2" type="button"></button>
+            <button id="option-3" type="button"></button>
+            <button id="option-4" type="button"></button>
+          </div>
+          <dev></dev>
+        </div>
       </div>
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
         <div class="scorebox">
@@ -176,21 +187,6 @@
         </div>
       </div>
 
-      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-        <div class="multi-choose">
-          <div class="scorebox">
-            <p class="multi-score"></p>
-          </div>
-          <h1 class="multi-choose-title"></h1>
-          <div class="option-container">
-            <button id="option-1" type="button"></button>
-            <button id="option-2" type="button"></button>
-            <button id="option-3" type="button"></button>
-            <button id="option-4" type="button"></button>
-          </div>
-          <dev></dev>
-        </div>
-      </div>
       <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
     </div>
   </section>
@@ -594,6 +590,7 @@ function quizFunctions(vocabList, title) {
 //初始化函式
 function hideSection() {
   carSection.innerHTML = "";
+  carSection.style = "display: none; padding: 0px;";
   newsSection.style = "display: none;";
   texSection.style = "display: none;";
   vocSection.style = "display: none;";
