@@ -11,6 +11,9 @@
 <script></script>
 <script src="https://kit.fontawesome.com/bd3ff733cf.js" crossorigin="anonymous"></script>
 <style></style>
+<script></script>
+<script src="https://kit.fontawesome.com/bd3ff733cf.js" crossorigin="anonymous"></script>
+<style></style>
 
 <body>
 
@@ -68,27 +71,25 @@
     </div>
     <br>
   </div>
+  <section class="newsbar">
+    <marquee class="bar">
+      <p class="card-text">
+        <i class="fa-solid fa-bullhorn">
+        </i>請尊重智慧財產權 測試期間 網址切勿私下轉傳&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-bullhorn">
+        </i>Instagram: @a.vocab.o
+      </p>
+    </marquee>
+  </section>
   <div class="sec-container">
-
-    <!--最新消息區塊 -->
-    <section class="new-content">
-
-      <div class="card card-new-content">
-        <h5 class="card-header">最新消息</h5>
-        <div class="card-body">
-          <p class="card-text"><i class="fa-solid fa-bullhorn">敬請期待</i></p>
-        </div>
-      </div>
-    </section>
 
     <!--課本區塊 -->
     <section class="textbook">
       <div class="card card-textbook">
         <h5 class="card-header">英文課本</h5>
         <div class="card-body">
-          <p class="card-text"><i class="fa-solid fa-bullhorn">已更新至L8</i></p>
+          <p class="card-text">已更新至L8</p>
           <div class="btn-group">
-            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               英文課本
             </button>
             <ul class="dropdown-menu">
@@ -105,14 +106,14 @@
       <div class="card card-vocbook">
         <h5 class="card-header">核心字彙</h5>
         <div class="card-body">
-          <p class="card-text"><i class="fa-solid fa-bullhorn">已更新至U4</i></p>
+          <p class="card-text">已更新至U4</p>
           <div class="btn-group">
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               核心字彙 </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">1</a></li>
-              <li><a class="dropdown-item" href="#">2</a></li>
-              <li><a class="dropdown-item" href="#">3</a></li>
+              <li><a class="dropdown-item vob-u6" href="#">Part2 U6</a></li>
+              <li><a class="dropdown-item vob-u5" href="#">Part2 U5</a></li>
+              <li><a class="dropdown-item vob-u4" href="#">Part2 U4</a></li>
             </ul>
           </div>
         </div>
@@ -124,14 +125,33 @@
       <div class="card card-magazine">
         <h5 class="card-header">LIVE雜誌</h5>
         <div class="card-body">
-          <p class="card-text"><i class="fa-solid fa-bullhorn">已更新至W2</i></p>
+          <p class="card-text">已更新至W2</p>
           <div class="btn-group">
-            <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               LIVE雜誌 </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item mag-u1" href="#">1</a></li>
               <li><a class="dropdown-item mag-u2" href="#">2</a></li>
               <li><a class="dropdown-item mag-u3" href="#">3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--表單區塊 -->
+    <section class="new-content">
+
+      <div class="card card-new-content">
+        <h5 class="card-header">其他資訊</h5>
+        <div class="card-body">
+          <p class="card-text">我們要更好!!</p>
+          <div class="btn-group">
+            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              表單連結 </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://www.surveycake.com/s/gl0xB" target="_blank">使用回饋</a></li>
+              <li><a class="dropdown-item" href="https://www.surveycake.com/s/wWM2o" target="_blank">回報錯誤</a></li>
             </ul>
           </div>
         </div>
@@ -237,14 +257,6 @@ html,
   height: 844px;
   background-color: #f3f4f4;
 }
-.pop-btn {
-  border-radius: 50%;
-  border: 0px;
-  fon-size: 30px;
-  color: #f7ffeb;
-  z-index: 5;
-  background-color: #d49e48;
-}
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -261,6 +273,20 @@ html,
 .specialize {
   font-weight: 800;
   color: #f2b035;
+}
+.newsbar {
+  margin: 25px 25px 0px 25px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(215, 190, 150, 0.6);
+}
+.bar {
+  margin: 0px 5px 0px 5px;
+  padding: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
 }
 .car-container {
   padding-top: 20px;
@@ -431,12 +457,10 @@ img {
 }
 </style>
 <script>
-    //彈出視窗
+   //彈出視窗
 const popAlert = document.querySelector(".pop-toast");
 
 //單字庫
-let vocabs = [];
-
 const tebL7voc = [
   "seek",
   "(v.)尋求；尋找",
@@ -523,16 +547,146 @@ const tebL7voc = [
   "blockbuster",
   "(n.)賣座鉅片"
 ];
-vocabs.push(tebL7voc);
-
-const verb = ["run", "(v.)跑", "jump", "(v.)跳"];
-vocabs.push(verb);
-
-const adj = ["pretty", "(adj.)漂亮的", "fast", "(adj.)快的"];
-vocabs.push(adj);
+const vobU4voc = [
+  "dominant",
+  "(adj.)主要的；具支配地位的",
+  "rank",
+  "(n.)地位；階級；(v.)排名；將...分級",
+  "figure",
+  "(n.)重要人物；人物塑像；體態；數字；(v.)認為；估算",
+  "suffer",
+  "(v.)承受(疾病痛苦)；遭受",
+  "scarcity",
+  "(n.)缺乏；不足",
+  "remedy",
+  "(v.)治療；補救；糾正；(n.)療法；藥品；解決方法",
+  "strike",
+  "(v.)突然襲擊；(災難疾病)降臨；(n.)襲擊；罷工",
+  "devil",
+  "(n.)惡魔",
+  "advantage",
+  "(n.)好處；優勢",
+  "cope",
+  "(v.)處理；應付",
+  "struggle",
+  "(v.)(n.)努力；掙扎",
+  "physical",
+  "(adj.)身體的；物質的；物理的；實體的",
+  "aware",
+  "(adj.)知道的；查覺到的",
+  "confidence",
+  "(n.)信任；信心",
+  "sympathetic",
+  "(adj.)有同情心的；表示同情地",
+  "gear",
+  "(n.)設備；裝備",
+  "capable",
+  "(adj.)有能力的；能夠...的",
+  "accomplishment",
+  "(n.)成就"
+];
+const vobU5voc = [
+  "serve",
+  "(v.)端(飯菜)；伺候",
+  "fare",
+  "(n.)餐點；飲食；(交通)費用",
+  "cultural",
+  "(adj.)文化的",
+  "particularly",
+  "(adv.)特別是；尤其是",
+  "pride",
+  "(v.)以...自豪；(n.)驕傲；引以自豪的人事物",
+  "for instance",
+  "(phr.)例如",
+  "boast",
+  "(v.)以...自豪；誇耀",
+  "regional",
+  "(adj.)地區的",
+  "exist",
+  "(v.)存在",
+  "distinguished",
+  "(adj.)著名的；傑出的",
+  "include",
+  "(v.)包含",
+  "method",
+  "(n.)方法",
+  "result in",
+  "(phr.)造成；引起",
+  "genuine",
+  "(adj.)真正的；真摯的",
+  "toss",
+  "(v.)(n.)拋；丟；投",
+  "constantly",
+  "(adv.)持續不斷地；經常地",
+  "apply",
+  "(v.)運用；塗抹；敷",
+  "apply for",
+  "(phr.)申請",
+  "apply to",
+  "(phr.)適用",
+  "season",
+  "(n.)季節；(v.)給...調味",
+  "diner",
+  "(n.)用餐者；小飯館",
+  "frequently",
+  "(adv.)經常地；頻繁地",
+  "additional",
+  "(adj.)額外的；附加的",
+  "consume",
+  "(v.)吃喝；消耗",
+  "consist of",
+  "(phr.)由...組成",
+  "traditionally",
+  "(adv.)傳統上；依照慣例"
+];
+const vobU6voc = [
+  "debate",
+  "(v.)(n.)辯論；爭辯",
+  "superior",
+  "(adj.)優於...的；(品質)上等的；(n.)上司",
+  "intelligent",
+  "(adj.)聰明的；有才智的",
+  "feature",
+  "(v.)由...主演；以...為主要特色；(n.)特色；專題；電影",
+  "graduate",
+  "(adj.)研究生的；(n.)畢業生:(v.)畢業；晉升；取得...學位",
+  "professor",
+  "(n.)教授",
+  "sample",
+  "(n.)樣本；(v.)品嘗",
+  "measure",
+  "(v.)測量；評估；(n.)措施；方法",
+  "indicate",
+  "(v.)表明；暗示；指向",
+  "emotional",
+  "(adj.)情緒上的；激起強烈情緒的",
+  "admit",
+  "(v.)承認；招認；允許...進入",
+  "limited",
+  "(adj.)有限的；不多的",
+  "laboratory",
+  "(n.)實驗室；實驗大樓",
+  "familiar",
+  "(adj.)熟悉的",
+  "match",
+  "(n.)比賽；對手；(v.)與...相配；配對",
+  "corresponding",
+  "(adj.)相應的",
+  "facial",
+  "(adj.)臉部的；(n.)臉部療程；做臉",
+  "expression",
+  "(n.)表情；說法；用詞",
+  "interact",
+  "(v.)互動",
+  "avoid",
+  "(v.)迴避；避免；防止",
+  "upset",
+  "(adj.)傷心地；(v.)使煩惱；使生氣；打亂；(n.)混亂"
+];
 
 //宣告區塊
 const nav = document.querySelector(".navbar");
+const newsbar = document.querySelector(".newsbar");
 const carSection = document.querySelector(".car-container");
 const secSection = document.querySelector(".sec-container");
 const newsSection = document.querySelector(".new-content");
@@ -543,10 +697,15 @@ const quizSection = document.querySelector(".quiz");
 const resultSection = document.querySelector(".result");
 
 //宣告節點
+const tebL7 = document.querySelector(".teb-l7");
+const tebL8 = document.querySelector(".teb-l8");
+const vobU4 = document.querySelector(".vob-u4");
+const vobU5 = document.querySelector(".vob-u5");
+const vobU6 = document.querySelector(".vob-u6");
 const magU1 = document.querySelector(".mag-u1");
 const magU2 = document.querySelector(".mag-u2");
 const magU3 = document.querySelector(".mag-u3");
-const tebL7 = document.querySelector(".teb-l7");
+
 const vocabNav = document.querySelector(".nav-vocab");
 const vocabListOl = document.querySelector(".vocab-list");
 const vocabQuizTitle = document.querySelector(".quiz-title");
@@ -567,6 +726,21 @@ const errorToast = document.querySelector(".error-toast");
 const incorrectList = document.querySelector(".incorrect-list");
 
 //監聽器
+vobU4.addEventListener("click", function () {
+  quizFunctions(vobU4voc, "核心字彙 Part2 U4");
+});
+vobU5.addEventListener("click", function () {
+  quizFunctions(vobU5voc, "核心字彙 Part2 U5");
+});
+vobU6.addEventListener("click", function () {
+  quizFunctions(vobU6voc, "核心字彙 Part2 U6");
+});
+tebL7.addEventListener("click", function () {
+  quizFunctions(tebL7voc, "L7生字");
+});
+tebL8.addEventListener("click", function () {
+  quizFunctions(tebL8voc, "L8生字");
+});
 magU1.addEventListener("click", function () {
   quizFunctions();
 });
@@ -576,11 +750,9 @@ magU2.addEventListener("click", function () {
 magU3.addEventListener("click", function () {
   quizFunctions();
 });
-tebL7.addEventListener("click", function () {
-  quizFunctions(tebL7voc, "L7生字");
-});
 
 function quizFunctions(vocabList, title) {
+  console.log("d");
   hideSection();
   fillVocabList(vocabList, title);
   fillQuizTitle(vocabList, title);
@@ -589,6 +761,7 @@ function quizFunctions(vocabList, title) {
 
 //初始化函式
 function hideSection() {
+  newsbar.style = "display: none; padding: 0px;";
   carSection.innerHTML = "";
   carSection.style = "display: none; padding: 0px;";
   newsSection.style = "display: none;";
@@ -949,5 +1122,4 @@ function fillIncorrectList(vocabList, title) {
       </li>`;
   }
 }
-
 </script>
