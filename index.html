@@ -9,8 +9,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+TC&display=swap');
 </style>
 <script></script>
-<script src="https://kit.fontawesome.com/bd3ff733cf.js" crossorigin="anonymous"></script>
-<style></style>
 <script></script>
 <script src="https://kit.fontawesome.com/bd3ff733cf.js" crossorigin="anonymous"></script>
 <style></style>
@@ -23,6 +21,15 @@
       <p class="nav-word">🥑 a<word class="specialize">VOCAB</word>o</p>
     </div>
   </nav>
+  <section class="newsbar">
+    <marquee class="bar">
+      <p class="card-text">
+        <i class="fa-solid fa-bullhorn">
+        </i>請尊重智慧財產權 測試期間 網址切勿私下轉傳&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-bullhorn">
+        </i>Instagram: @a.vocab.o
+      </p>
+    </marquee>
+  </section>
 
   <!-- 滑動介紹 -->
   <div class="car-container">
@@ -71,15 +78,6 @@
     </div>
     <br>
   </div>
-  <section class="newsbar">
-    <marquee class="bar">
-      <p class="card-text">
-        <i class="fa-solid fa-bullhorn">
-        </i>請尊重智慧財產權 測試期間 網址切勿私下轉傳&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-bullhorn">
-        </i>Instagram: @a.vocab.o
-      </p>
-    </marquee>
-  </section>
   <div class="sec-container">
 
     <!--課本區塊 -->
@@ -87,13 +85,13 @@
       <div class="card card-textbook">
         <h5 class="card-header">英文課本</h5>
         <div class="card-body">
-          <p class="card-text">已更新至L8</p>
+          <p class="card-text">已更新至L7</p>
           <div class="btn-group">
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               英文課本
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item teb-l8" href="#">L8生字</a></li>
+              <!--               <li><a class="dropdown-item teb-l8" href="#">L8生字</a></li> -->
               <li><a class="dropdown-item teb-l7" href="#">L7生字</a></li>
             </ul>
           </div>
@@ -106,7 +104,7 @@
       <div class="card card-vocbook">
         <h5 class="card-header">核心字彙</h5>
         <div class="card-body">
-          <p class="card-text">已更新至U4</p>
+          <p class="card-text">已更新至U6</p>
           <div class="btn-group">
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               核心字彙 </button>
@@ -125,14 +123,13 @@
       <div class="card card-magazine">
         <h5 class="card-header">LIVE雜誌</h5>
         <div class="card-body">
-          <p class="card-text">已更新至W2</p>
+          <p class="card-text">已更新至JunW1</p>
           <div class="btn-group">
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               LIVE雜誌 </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item mag-u1" href="#">1</a></li>
-              <li><a class="dropdown-item mag-u2" href="#">2</a></li>
-              <li><a class="dropdown-item mag-u3" href="#">3</a></li>
+              <li><a class="dropdown-item mag-jun-w1" href="#">Jun Week1</a></li>
+              <li><a class="dropdown-item mag-may-w4" href="#">May Week4</a></li>
             </ul>
           </div>
         </div>
@@ -231,7 +228,7 @@
       </div>
     </div>
     <ol class="list-group list-group-numbered incorrect-list">
-      <h3> 錯誤單詞清單</h3>
+      <h3>&emsp;錯誤單詞清單</h3>
     </ol>
 
   </section>
@@ -258,12 +255,14 @@ html,
   background-color: #f3f4f4;
 }
 .navbar {
+  width: 390px;
+  height: 60px;
   display: flex;
   justify-content: flex-start;
   padding: 7px;
   padding-left: 12px;
   background-color: #e9e9e9;
-  height: 60px;
+  position: fixed;
 }
 .nav-title {
   font-size: 28px;
@@ -275,20 +274,25 @@ html,
   color: #f2b035;
 }
 .newsbar {
-  margin: 25px 25px 0px 25px;
+  margin: 10px 25px 0px 25px;
+  width: 340px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
-  background-color: rgba(215, 190, 150, 0.6);
+  background-color: rgba(215, 190, 150, 0.5);
+  position: fixed;
+  z-index: 2;
 }
 .bar {
+  opacity: 0.8;
   margin: 0px 5px 0px 5px;
   padding: 6px;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   letter-spacing: 1.5px;
 }
 .car-container {
+  margin-top: 60px;
   padding-top: 20px;
   display: flex;
   justify-content: center;
@@ -343,6 +347,7 @@ img {
 .quiz {
   display: none;
   width: 100%;
+  margin-top: 55px;
   height: 100vh;
 }
 .card,
@@ -432,6 +437,7 @@ img {
   width: 90%;
   padding: 12px;
   margin: 15px;
+  text-align: left;
   display: flex;
   justify-content: flex-start;
 }
@@ -681,7 +687,149 @@ const vobU6voc = [
   "avoid",
   "(v.)迴避；避免；防止",
   "upset",
-  "(adj.)傷心地；(v.)使煩惱；使生氣；打亂；(n.)混亂"
+  "(adj.)傷心地；(v.)使煩惱；使生氣；打亂；(n.)混亂",
+  "complex",
+  "(adj.)錯綜複雜的；(n.)綜合大樓",
+  "prefer",
+  "(v.)更喜歡"
+];
+const magMayW4voc = [
+  "grocery",
+  "(n.)食品雜貨(店)",
+  "freezer",
+  "(n.)冰櫃；冷凍庫",
+  "advertisement",
+  "(n.)廣告",
+  "definitely",
+  "(adv.)當然；確定地",
+  "confirm",
+  "(v.)確認；證實",
+  "receipt",
+  "(n.)收據",
+  "inspect",
+  "(v.)檢查",
+  "refund",
+  "(n.)(v.)退款",
+  "specifically",
+  "(adv.)準確地；具體地",
+  "frequency",
+  "(n.)(聲波、無線電波的)頻率",
+  "intensity",
+  "(n.)(光、聲音的)強度",
+  "rainfall",
+  "(n.)降雨(量)",
+  "roaring",
+  "(adj.)(水)轟隆的；咆哮的；猛烈的",
+  "resemble",
+  "(adj.)與...相像；類似",
+  "experiment",
+  "(n.)實驗；試驗",
+  "theory",
+  "(n.)理論；學說；觀點",
+  "phenomenon",
+  "(n.)現象",
+  "isolated",
+  "(adj.)孤立的",
+  "audio",
+  "(adj.)聲音的；聽覺的",
+  "investigate",
+  "(v.)調查",
+  "wisdom",
+  "(n.)智慧；看法",
+  "formula",
+  "(n.)公式；方程式；準則；慣例",
+  "gender",
+  "(n.)性別",
+  "physically",
+  "(adv.)身體上地；肉體地",
+  "content",
+  "(n.)內容；目錄；含量",
+  "species",
+  "(n.)物種",
+  "breed",
+  "(v.)交配繁殖；(為育種而)飼養；(n.)品種",
+  "combination",
+  "(n.)組合",
+  "stripe",
+  "(n.)條紋；斑紋",
+  "gene",
+  "(n.)基因；遺傳因子",
+  "territory",
+  "(n.)領土；(動物的)地盤",
+  "creation",
+  "(n.)產物；創造",
+  "mild",
+  "(adj.)溫和的；和煦的",
+  "complicated",
+  "(adj.)複雜的；難處裡的",
+  "adapt",
+  "(v.)適應"
+];
+const magJunW1voc = [
+  "communication",
+  "(n.)交流；溝通",
+  "crack",
+  "(n.)裂縫；缺口",
+  "curse",
+  "(v.)(n.)咒罵；詛咒；禍害",
+  "pace",
+  "(n.)步調；速度；節奏",
+  "tomb",
+  "(n.)(重要人物的)墓",
+  "accidentally",
+  "(adv.)意外地；偶然地",
+  "flee",
+  "(v.)逃跑；逃離",
+  "horrify",
+  "(v.)使震驚",
+  "emerge",
+  "(v.)出現；顯露",
+  "stab",
+  "(v.)將...刺入；戳；捅",
+  "harvest",
+  "(n.)收成；收穫時節",
+  "celebration",
+  "(n.)慶祝",
+  "gratitude",
+  "(n.)感謝",
+  "enormous",
+  "(adj.)巨大的；極大的",
+  "authentic",
+  "(adj.)道地的；正宗的；真正的",
+  "rural",
+  "(adj.)鄉村的",
+  "portray",
+  "(v.)飾演；描繪；刻劃",
+  "costume",
+  "(n.)表演服裝；(某歷史時期的)服飾",
+  "accomapny",
+  "(v.)伴隨；為...伴奏",
+  "exception",
+  "(n.)例外；除外",
+  "blessing",
+  "(n.)好事；福祉",
+  "staff",
+  "(n.)全體員工；職員",
+  "concept",
+  "(n.)觀念；概念",
+  "eventually",
+  "(adv.)最後；終於",
+  "definite",
+  "(adj.)清楚的；明顯的",
+  "severe",
+  "(adj.)非常嚴重；嚴厲的；苛刻的",
+  "absolutely",
+  "(adv.)極其；絕對地",
+  "exhausted",
+  "(adj.)極其疲憊的；筋疲力盡的",
+  "shave",
+  "(v.)刮鬍子；剃毛",
+  "scratch",
+  "(v.)抓傷；搔",
+  "assume",
+  "(v.)假設；以為",
+  "mild",
+  "(adj.)輕微的；溫和的"
 ];
 
 //宣告區塊
@@ -702,9 +850,8 @@ const tebL8 = document.querySelector(".teb-l8");
 const vobU4 = document.querySelector(".vob-u4");
 const vobU5 = document.querySelector(".vob-u5");
 const vobU6 = document.querySelector(".vob-u6");
-const magU1 = document.querySelector(".mag-u1");
-const magU2 = document.querySelector(".mag-u2");
-const magU3 = document.querySelector(".mag-u3");
+const magJunW1 = document.querySelector(".mag-jun-w1");
+const magMayW4 = document.querySelector(".mag-may-w4");
 
 const vocabNav = document.querySelector(".nav-vocab");
 const vocabListOl = document.querySelector(".vocab-list");
@@ -736,23 +883,19 @@ vobU6.addEventListener("click", function () {
   quizFunctions(vobU6voc, "核心字彙 Part2 U6");
 });
 tebL7.addEventListener("click", function () {
-  quizFunctions(tebL7voc, "L7生字");
+  quizFunctions(tebL7voc, "課本 L7生字");
 });
-tebL8.addEventListener("click", function () {
-  quizFunctions(tebL8voc, "L8生字");
+// tebL8.addEventListener("click", function () {
+//   quizFunctions(tebL8voc, "課本 L8生字");
+// });
+magMayW4.addEventListener("click", function () {
+  quizFunctions(magMayW4voc, "Live雜誌 May Week4");
 });
-magU1.addEventListener("click", function () {
-  quizFunctions();
-});
-magU2.addEventListener("click", function () {
-  quizFunctions();
-});
-magU3.addEventListener("click", function () {
-  quizFunctions();
+magJunW1.addEventListener("click", function () {
+  quizFunctions(magJunW1voc, "Live雜誌 Jun Week1");
 });
 
 function quizFunctions(vocabList, title) {
-  console.log("d");
   hideSection();
   fillVocabList(vocabList, title);
   fillQuizTitle(vocabList, title);
@@ -1122,4 +1265,5 @@ function fillIncorrectList(vocabList, title) {
       </li>`;
   }
 }
+
 </script>
