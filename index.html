@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghBW-NDiuGpbY4H359BbdAjI5GC9NUXJme0ImQYdiPUKt34VTdjXNNOmKSmqF0Gp54OTVniwq5BUcHx4Reynvj5F56GgEa4-L3tIxoCwPLiW0lBVeJXtIS3ZclYXeeV4-_qRKSCO7lOGOYRR81zOjzQ1FrxN9pJ1uSVkfYqKC-XTZEZVIf8LxSLXVUdQ/w477-h479/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202023-05-28%20103709.png" alt="...">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghBW-NDiuGpbY4H359BbdAjI5GC9NUXJme0ImQYdiPUKt34VTdjXNNOmKSmqF0Gp54OTVniwq5BUcHx4Reynvj5F56GgEa4-L3tIxoCwPLiW0lBVeJXtIS3ZclYXeeV4-_qRKSCO7lOGOYRR81zOjzQ1FrxN9pJ1uSVkfYqKC-XTZEZVIf8LxSLXVUdQ/w625-h627/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202023-05-28%20103709.png" alt="...">
           <div class="carousel-caption d-md-block">
             <h5>aVOCABo</h5>
             <p>出錯了嗎?填表單告訴我!<br><i class="fa-solid fa-link"> <a href="https://www.surveycake.com/s/wWM2o" target="_blank">錯誤回報</a>
@@ -332,7 +332,7 @@ img {
 .vocbook,
 .magazine {
   width: 100%;
-  margin-top: 1vh;
+  margin-top: 3vh;
   font-size: 2vh;
 }
 .card-new-content,
@@ -341,7 +341,7 @@ img {
 .card-magazine {
   display: inline-block;
   width: 90%;
-  min-height: 18vh;
+  min-height: 17vh;
   max-height: 25vh;
   border-radius: 1vh;
 }
@@ -349,21 +349,23 @@ img {
   padding: 1vh;
   font-weight: 650;
   font-size: 2.4vh;
+  letter-spacing: 0.1vh;
 }
 .btn-outline-dark {
   font-size: 1.8vh;
+  margin-top: 0.4vh;
   padding: 1vh;
   border-radius: 1.4vh;
 }
 .dropdown-item {
-  font-size: 1.4vh;
-  padding: 1.2vh;
+  font-size: 1.6vh;
+  padding: 1.5vh;
 }
 .quiz {
   display: none;
   width: 100vw;
   margin-top: 7.9vh;
-  height: 100vh;
+  height: 70vh;
 }
 .card,
 .card-body {
@@ -375,8 +377,7 @@ img {
   padding: 1vh;
 }
 .vocab-list {
-  margin-top: 0.5vh;
-  font-size: 1.6vh;
+  font-size: 2vh;
 }
 .list-group-item i {
   position: absolute;
@@ -386,9 +387,8 @@ img {
   padding: 1vh;
 }
 .word {
-  font-size: 1.8vh;
-  margin-top: 0.5vh;
-  margin-bottom: 0.5vh;
+  font-size: 2vh;
+  margin-bottom: 0.6vh;
 }
 .scorebox {
   display: flex;
@@ -461,6 +461,7 @@ img {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
   margin-left: 2.5%;
+  font-size: 2.2vh;
 }
 .option-container {
   width: 100%;
@@ -473,6 +474,7 @@ img {
   padding: 1.5vh;
   margin: 1.8vh;
   text-align: left;
+  border-radius: 2vh;
   display: flex;
   justify-content: flex-start;
   font-size: 2vh;
@@ -491,19 +493,27 @@ img {
   font-size: 2vh;
   font-weight: 300;
 }
+.alert-primary {
+  margin-top: 10.1vw;
+  font-size: 2vh;
+}
+h3 {
+  font-size: 2vh;
+}
+.incolist {
+  font-size: 2vh;
+  margin-bottom: 0.6vh;
+}
 .footer {
   background-color: #d7be96;
   width: 100%;
+  min-height: 20vh;
   margin-top: 2vh;
   padding: 1.5vh;
   font-size: 1.8vh;
 }
-
 </style>
 <script>
- //彈出視窗
-const popAlert = document.querySelector(".pop-toast");
-
 //單字庫
 const tebL7voc = [
   "seek",
@@ -1293,7 +1303,7 @@ function showResult(score, incorrectList) {
 
 function fillIncorrectList(vocabList, title) {
   for (let i = 0; i < vocabList.length; i++) {
-    incorrectList.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-start">
+    incorrectList.innerHTML += `<li class="list-group-item incolist d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold vocabListItem">
         ${vocabList[i]}
@@ -1303,5 +1313,4 @@ function fillIncorrectList(vocabList, title) {
       </li>`;
   }
 }
-
 </script>
