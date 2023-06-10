@@ -365,7 +365,7 @@ img {
   display: none;
   width: 100vw;
   margin-top: 7.9vh;
-  height: 70vh;
+  min-height: 60vh;
 }
 .card,
 .card-body {
@@ -373,7 +373,7 @@ img {
   margin-right: 5%;
 }
 .nav-link {
-  font-size: 1.8vh;
+  font-size: 2.3vh;
   padding: 1vh;
 }
 .vocab-list {
@@ -384,7 +384,7 @@ img {
   right: 0;
   margin-right: 2vw;
   font-size: 2vh;
-  padding: 1vh;
+  padding: 1.2vh;
 }
 .word {
   font-size: 2vh;
@@ -430,14 +430,15 @@ img {
   background-color: #363432;
 }
 .vocab-quiz-inf {
-  font-size: 1.8vh;
+  font-size: 2.2vh;
+  max-width: 90vw;
 }
 .input-underline input {
   border: none;
   outline: none;
   background: none;
   padding: 0.3vh;
-  font-size: 1.6vh;
+  font-size: 2vh;
 }
 .fa-lightbulb:before {
   font-size: 2vh;
@@ -461,7 +462,7 @@ img {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
   margin-left: 2.5%;
-  font-size: 2.2vh;
+  font-size: 3vh;
 }
 .option-container {
   width: 100%;
@@ -477,11 +478,17 @@ img {
   border-radius: 2vh;
   display: flex;
   justify-content: flex-start;
-  font-size: 2vh;
+  font-size: 2.2vh;
 }
 .toast-body {
-  font-size: 2vh;
+  font-size: 2.4vh;
   font-weight: bold;
+}
+.cor-toast,
+.cor-header,
+.cor-toast-body {
+  min-width: 50vw;
+  min-width: 90vw;
 }
 .result {
   display: none;
@@ -1073,12 +1080,12 @@ async function fillQuizTitle(vocabList, title) {
         const input = event.target.value.toLowerCase();
         if (input === correctAnswer) {
           vocabQuizInf.innerHTML = `
-            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true data-bs-delay="6000"">
-              <div class="toast-header" style="background-color: #CEF09D;">
+            <div class="toast cor-toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header cor-toast-header" style="background-color: #CEF09D;">
                 <strong class="me-auto">Correct</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
               </div>
-              <div class="toast-body">
+              <div class="toast-body cor-toast-body">
                 <i class="fa-regular fa-thumbs-up" style="color: #2b5aab;"></i> ${
                   vocabList[i - 1]
                 }${vocabList[i]}
