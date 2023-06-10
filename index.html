@@ -14,6 +14,7 @@
 <style></style>
 
 <body>
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
 
   <!--標題列 -->
   <nav class="navbar sticky-top">
@@ -304,12 +305,13 @@ html,
 }
 img {
   border-radius: 1vh;
+  max-height: 35vh;
+  max-width: 35vh;
 }
 .fa-instagram {
   font-size: 2vh;
 }
 .card-img-top {
-  max-height: 18vh;
   width: 100%;
   object-fit: cover;
 }
@@ -357,6 +359,9 @@ img {
   padding: 1vh;
   border-radius: 1.4vh;
 }
+.card-text {
+  margin-top: 0.4vh;
+}
 .dropdown-item {
   font-size: 1.6vh;
   padding: 1.5vh;
@@ -369,8 +374,8 @@ img {
 }
 .card,
 .card-body {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 1vh;
+  margin-right: 1vh;
 }
 .nav-link {
   font-size: 2.3vh;
@@ -457,6 +462,9 @@ img {
   margin-bottom: 2vh;
   font-weight: 700;
 }
+.btn-primary {
+  margin-bottom: 2vh;
+}
 .quiz-title,
 .multi-choose-title {
   margin-top: 2.5%;
@@ -501,11 +509,11 @@ img {
   font-weight: 300;
 }
 .alert-primary {
-  margin-top: 10.1vw;
+  margin-top: 12vw;
   font-size: 2vh;
 }
 h3 {
-  font-size: 2vh;
+  font-size: 3vh;
 }
 .incolist {
   font-size: 2vh;
@@ -518,6 +526,7 @@ h3 {
   margin-top: 2vh;
   padding: 1.5vh;
   font-size: 1.8vh;
+  opacity: 0.9;
 }
 </style>
 <script>
@@ -1320,4 +1329,5 @@ function fillIncorrectList(vocabList, title) {
       </li>`;
   }
 }
+
 </script>
