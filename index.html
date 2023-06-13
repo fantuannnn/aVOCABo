@@ -10,8 +10,6 @@
 </style>
 <script src="https://kit.fontawesome.com/bd3ff733cf.js" crossorigin="anonymous"></script>
 <style></style>
-<script src="https://kit.fontawesome.com/bd3ff733cf.js" crossorigin="anonymous"></script>
-<style></style>
 
 <head>
   <meta property="og:image" content="https://i.imgur.com/0DiI6Yg.jpg">
@@ -26,19 +24,25 @@
   <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
 
   <!--標題列 -->
-  <a href="https://fantuannnn.github.io/aVOCABo/">
-    <nav class="navbar sticky-top">
-      <div class="container-fluid nav-title">
-        <p class="nav-word">🥑 a<word class="specialize">VOCAB</word>o</p>
+  <nav class="navbar sticky-top">
+    <a href="https://fantuannnn.github.io/aVOCABo/" style="text-decoration:none;">
+      <div class="a-container">
+
+        <div class="container-fluid nav-title">
+          🥑 a<word class="specialize">VOCAB</word>o</div>
       </div>
-    </nav>
-  </a>
+      </div>
+    </a>
+
+  </nav>
+
   <section class="newsbar">
     <marquee class="bar">
       <p class="card-text">
         <i class="fa-solid fa-bullhorn">
-        </i>請尊重智慧財產權 測試期間 網址切勿私下轉傳&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-bullhorn">
-        </i>下波單字更新：課本L8、核心字彙Part2 U9~12 敬請期待！
+        </i>下波單字更新:核心字彙U9~12&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-bullhorn">&emsp;<a href="https://www.surveycake.com/s/gl0xB" target="_blank">使用回饋</a>
+          <a href="https://www.surveycake.com/s/wWM2o" target="_blank">錯誤回報</a>
+        </i>
       </p>
     </marquee>
   </section>
@@ -97,13 +101,13 @@
       <div class="card card-textbook">
         <h5 class="card-header">英文課本</h5>
         <div class="card-body">
-          <p class="card-text">已更新至L7</p>
+          <p class="card-text">已更新至L8</p>
           <div class="btn-group">
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               英文課本
             </button>
             <ul class="dropdown-menu">
-              <!--               <li><a class="dropdown-item teb-l8" href="#">L8生字</a></li> -->
+              <li><a class="dropdown-item teb-l8" href="#">L8生字</a></li>
               <li><a class="dropdown-item teb-l7" href="#">L7生字</a></li>
             </ul>
           </div>
@@ -271,14 +275,19 @@ html,
   height: 8vh;
   display: flex;
   justify-content: flex-start;
-  padding: 1.2vh;
   background-color: #e9e9e9;
   position: fixed;
 }
-.nav-title {
+.container-fluid {
+  max-height: 5vh;
   font-size: 4vh;
   font-weight: 650;
   color: #97bf6f;
+}
+.nav-word {
+  height: 8vh;
+  margin: 0px;
+  padding: 0px;
 }
 .specialize {
   font-weight: 800;
@@ -539,6 +548,7 @@ h3 {
   font-size: 1.8vh;
   opacity: 0.9;
 }
+
 </style>
 <script>
 //單字庫
@@ -627,6 +637,92 @@ const tebL7voc = [
   "(n.)主廚",
   "blockbuster",
   "(n.)賣座鉅片"
+];
+const tebL8voc = [
+  "exchange",
+  "(n.)(v.)交換；交流",
+  "expect",
+  "(v.)預期",
+  "expectation",
+  "(n.)預期；期望",
+  "shelter",
+  "(n.)庇護處:(v.)遮蔽",
+  "fierce",
+  "(adj.)(天氣狀況)強烈的；(動作或情感)激烈的",
+  "occupy",
+  "(v.)占據(時間或空間)；占領",
+  "occupation",
+  "(n.)職業",
+  "vehicle",
+  "(n.)車輛;交通工具",
+  "temporary",
+  "(adj.)臨時的;暫時的",
+  "assistant",
+  "(adj.)助手;助理",
+  "assist",
+  "(v.)幫助",
+  "assistance",
+  "(n.)協助",
+  "originate",
+  "(v.)起源",
+  "origin",
+  "(n.)起源",
+  "original",
+  "(adj.)原本的",
+  "event",
+  "(n.)事件",
+  "elder",
+  "(n.)長輩；(adj.)較為年長的",
+  "elderly",
+  "(adj.)年紀大的",
+  "neighborhood",
+  "(n.)鄰近地區",
+  "cooperate",
+  "(v.)合作",
+  "cooperation",
+  "(n.)合作",
+  "arrange",
+  "(v.)安排",
+  "arrangement",
+  "(n.)安排",
+  "relax",
+  "(v.)放鬆",
+  "container",
+  "(n.)容器",
+  "contain",
+  "(v.)包含",
+  "stroll",
+  "(v.)(n.)散步",
+  "spirit",
+  "(n.)基本精神；本質；心靈",
+  "spiritual",
+  "(adj.)精神上的",
+  "take part in",
+  "(phr.)參加",
+  "take place",
+  "(phr.)舉行；發生",
+  "come about",
+  "(phr.)發生",
+  "help about",
+  "(phr.)幫忙",
+  "hand out",
+  "(phr.)發放",
+  "ban-doh",
+  "(n.)辦桌",
+  "authentic",
+  "(adj.)道地的；真正的",
+  "banquet",
+  "(n.)宴會",
+  "tent",
+  "(n.)帳篷",
+  "platter",
+  "(n.)大盤子",
+  "utensil",
+  "(n.)餐具",
+  "leftovers",
+  "(n.)剩菜",
+  "folks",
+  "(n.)人們"
 ];
 const vobU4voc = [
   "dominant",
@@ -960,9 +1056,9 @@ vobU6.addEventListener("click", function () {
 tebL7.addEventListener("click", function () {
   quizFunctions(tebL7voc, "課本 L7生字");
 });
-// tebL8.addEventListener("click", function () {
-//   quizFunctions(tebL8voc, "課本 L8生字");
-// });
+tebL8.addEventListener("click", function () {
+  quizFunctions(tebL8voc, "課本 L8生字");
+});
 magMayW4.addEventListener("click", function () {
   quizFunctions(magMayW4voc, "Live雜誌 May Week4");
 });
