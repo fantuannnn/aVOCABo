@@ -124,6 +124,7 @@
             <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               核心字彙 </button>
             <ul class="dropdown-menu">
+              <li><a class="dropdown-item vob-u7" href="#">Part2 U7</a></li>
               <li><a class="dropdown-item vob-u6" href="#">Part2 U6</a></li>
               <li><a class="dropdown-item vob-u5" href="#">Part2 U5</a></li>
               <li><a class="dropdown-item vob-u4" href="#">Part2 U4</a></li>
@@ -870,6 +871,46 @@ const vobU6voc = [
   "prefer",
   "(v.)更喜歡"
 ];
+const vobU7voc = [
+  "continously",
+  "(adv.)持續不斷地",
+  "barely",
+  "(adv.)幾乎沒有地；緊緊；剛剛",
+  "frustrated",
+  "(adj.)失意的",
+  "immigrant",
+  "(n.)移民",
+  "creative",
+  "(adj.)富有創意的；有想像力的",
+  "attempt",
+  "(n.)(v.)試圖；嘗試",
+  "reform",
+  "(v.)改良；更新",
+  "marble",
+  "(n.)彈珠；大理石",
+  "construct",
+  "(v.)建造；構成",
+  "stick",
+  "(v.)黏貼；附著在；插:(n.)棍子；枝條",
+  "circular",
+  "(adj.)圓形的",
+  "resistence",
+  "(n.)抵抗力；阻力",
+  "ease",
+  "(v.)減輕；和緩:(n.)容易",
+  "efficiency",
+  "(n.)效率；效能",
+  "manufacture",
+  "(n.)(v.)製造；生產",
+  "unfortunately",
+  "(adv.)不幸地；遺憾地",
+  "original",
+  "(adj.)原先的；獨創的",
+  "desire",
+  "(n.)(v.)渴望",
+  "expense",
+  "(n.)支出"
+];
 const magMayW4voc = [
   "grocery",
   "(n.)食品雜貨(店)",
@@ -1027,6 +1068,7 @@ const tebL8 = document.querySelector(".teb-l8");
 const vobU4 = document.querySelector(".vob-u4");
 const vobU5 = document.querySelector(".vob-u5");
 const vobU6 = document.querySelector(".vob-u6");
+const vobU7 = document.querySelector(".vob-u7");
 const magJunW1 = document.querySelector(".mag-jun-w1");
 const magMayW4 = document.querySelector(".mag-may-w4");
 
@@ -1058,6 +1100,9 @@ vobU5.addEventListener("click", function () {
 });
 vobU6.addEventListener("click", function () {
   quizFunctions(vobU6voc, "核心字彙 Part2 U6");
+});
+vobU7.addEventListener("click", function () {
+  quizFunctions(vobU7voc, "核心字彙 Part2 U7");
 });
 tebL7.addEventListener("click", function () {
   quizFunctions(tebL7voc, "課本 L7生字");
